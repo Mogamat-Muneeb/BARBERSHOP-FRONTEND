@@ -1,5 +1,6 @@
 import axios from "axios";
-const API_URL = "https://barber-shopbackend.herokuapp.com/customers/";
+// const API_URL = "https://barber-shopbackend.herokuapp.com/customers/";
+const API_URL = "http://localhost:3000/customers/";
 class AuthService {
   async login(customer) {
     return axios

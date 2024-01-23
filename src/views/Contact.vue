@@ -59,7 +59,8 @@ export default {
     email: this.email,
     message: this.message,
   }
-    fetch('https://barber-shopbackend.herokuapp.com/contact', {
+    // fetch('https://barber-shopbackend.herokuapp.com/contact', {
+    fetch('http://localhost:3000/contact', {
   method: 'POST',
   body: JSON.stringify(contact),
   headers: {

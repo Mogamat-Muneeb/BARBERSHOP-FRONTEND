@@ -97,12 +97,14 @@ export default {
             }
         },
         mounted(){
-            fetch("https://barber-shopbackend.herokuapp.com/customers")
+            // fetch("https://barber-shopbackend.herokuapp.com/customers")
+            fetch("http://localhost:3000/customers")
             .then(res => res.json())
             .then(data => this.customers = data)
             .catch(err => console.log(err.message))
 
-            fetch("https://barber-shopbackend.herokuapp.com/barbers")
+            // fetch("https://barber-shopbackend.herokuapp.com/barbers")
+            fetch("http://localhost:3000/barbers")
             .then(res => res.json())
             .then(data => this.barbers = data)
             .catch(err => console.log(err.message))
@@ -125,7 +127,8 @@ export default {
       },
       async updateBarber() {
        try {
-      fetch(`https://barber-shopbackend.herokuapp.com/barbers/${this.barberToEdit}`,{
+      // fetch(`https://barber-shopbackend.herokuapp.com/barbers/${this.barberToEdit}`,{
+      fetch(`http://localhost:3000/barbers/${this.barberToEdit}`,{
         method: "PUT",
         body: JSON.stringify({
           barberName: this.updatedBarber.barberName,
@@ -159,7 +162,8 @@ export default {
           }`,
           },
       };
-      const new_url ="https://barber-shopbackend.herokuapp.com/barbers/";
+      // const new_url ="https://barber-shopbackend.herokuapp.com/barbers/";
+      const new_url ="http://localhost:3000/barbers/";
       try {
         await axios.delete(new_url + this.barberToEdit, headers, this.currentUser).then(() => {
           alert("Barber has been deleted successfully");

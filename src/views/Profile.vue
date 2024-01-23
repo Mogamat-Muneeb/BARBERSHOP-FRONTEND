@@ -4,7 +4,7 @@
       <img
         src="https://i.postimg.cc/yYWwpJnQ/Logo-Banner.png"
         alt=""
-        class="Logobanner object-cover"
+        class="object-cover Logobanner"
       />
     </div>
     <!-- <div class="absolute flex items-center justify bottom-96">
@@ -15,27 +15,27 @@
   </div> -->
   </div>
 
-  <h1 class="font-semibold text-3xl mt-14">Profile</h1>
-  <h1 class="font-semibold text-3xl mt-14">Personal Information</h1>
+  <h1 class="text-3xl font-semibold mt-14">Profile</h1>
+  <h1 class="text-3xl font-semibold mt-14">Personal Information</h1>
 
-  <div class="row p-5">
+  <div class="p-5 row">
     <div class="col">
       <!-- <h6>{{ currentUser.customername }}</h6>
       <h6>{{ currentUser.email}}</h6> -->
       <!-- <button class="btn" id="edit" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">EDIT</button>
           <button class="btn" id="delete" data-bs-toggle="modal" data-bs-target="#deleteModal">DELETE</button> -->
     </div>
-    <div class="grid grid-cols-3 justify-center items-center mx-auto maxWidth">
+    <div class="grid items-center justify-center grid-cols-3 mx-auto maxWidth">
       <div class="text-left">
-        <h1 class="font-semibold text-3xl">Email</h1>
+        <h1 class="text-3xl font-semibold">Email</h1>
         <span class="pro-detail">{{ currentUser.email }}</span>
       </div>
       <div class="">
-        <h1 class="font-semibold text-3xl">Name</h1>
+        <h1 class="text-3xl font-semibold">Name</h1>
         <span class="pro-detail">{{ currentUser.customername }}</span>
       </div>
       <div class="text-right">
-        <h1 class="font-semibold text-3xl">Phone</h1>
+        <h1 class="text-3xl font-semibold">Phone</h1>
         <span class="pro-detail">{{ currentUser.phone_number }}</span>
       </div>
     </div>
@@ -143,7 +143,8 @@
   </div> -->
 </template>
 <script>
-const url = "https://barber-shopbackend.herokuapp.com/customers/";
+// const url = "https://barber-shopbackend.herokuapp.com/customers/";
+const url = "http://localhost:3000/customers/";
 import axios from "axios";
 export default {
   name: "Profile",
